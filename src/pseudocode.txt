@@ -1,0 +1,61 @@
+while the player and boss health are above 0 {
+  
+  ask player what they want to do
+
+  if the player chooses to attack {
+    
+    ask what kind of attack to use
+    
+    if they choose to use fire attack {
+      decrease the boss's health by 15
+      decrease the fire stamina by 1
+    }
+
+    if they choose to use ice attack {
+      decrease the boss's health by 5
+      freeze the boss until start of next turn
+      decrease the ice stamina by 1
+    }
+
+    if they choose to use earth attack {
+      decrease the boss's health by 5
+      increase the player's health by 5
+      decrease the earth stamina by one
+    }
+
+  }
+
+  if the player chooses to use an item {
+    
+    ask which item to use
+
+    if they choose to use a serum {
+      increase the player's health by 10
+      decrease serum count by 1
+    }
+
+    if they choose to use a super serum {
+      increase the player's health by 20
+      decrease the super serum count by 1
+    }
+
+    if they choose to use a stamina fruit { 
+      ask what stamina to boost
+      boost corresponding element stamina by 3
+    }
+
+  }
+
+  if the player chooses to flee {
+    break out of the game loop
+  }
+
+  if the player inputted an invalid option {
+    handle accordingly
+  }
+
+  if the boss isn't frozen {
+    attack the player
+  }
+
+}
